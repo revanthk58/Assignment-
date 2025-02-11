@@ -193,7 +193,7 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 
 
 #OUT PUT 
- ![image alt]( )
+ ![image alt](https://github.com/revanthk58/Assignment-/blob/master/Screenshot%20(6).png?raw=true)
 
 
  I have created A html page to show the users data colourfully
