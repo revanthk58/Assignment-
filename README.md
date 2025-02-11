@@ -57,9 +57,12 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
     
     -GET http://localhost:3000/contacts/?Name=Rohit
     
-    -GET http://localhost:3000/contacts/?Email=sreyes@example.com&Name=Sreyas
+    -GET http://localhost:3000/contacts/?Email=shreyas.iyer@example.com&Name=Shreyas
     
-    -GET http://localhost:3000/contacts/?Email=ms.dhoni@example.com 
+    -GET http://localhost:3000/contacts/?Email=mayank.agarwal@example.com
+
+
+
     
 
 
