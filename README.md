@@ -14,7 +14,6 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
    - [DELETE /contacts/:ContactID](#delete-contact-by-id)
 4. [Database Setup](#database-setup)
 5. [Error Handling](#error-handling)
-6. [License](#license)
 
 ---
 
@@ -66,7 +65,7 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
     
 
 
-## POST/contacts:
+### POST/contacts:
 
 **Description**: To Add new user to Database,but primarly chech if already exists.if not Added to successfully.Other wise return with Bad request and message.
 
@@ -86,7 +85,7 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 
 
 
-## PUT/contacts:
+### PUT/contacts:
 
 **Description**: To Upadte the  user in Database whuch alredy exists, but primarly check if in/not in database.updates successfully.Other wise return with Bad request and message.
 
@@ -103,7 +102,7 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 
 
 
-## DELETE/contacts:
+### DELETE/contacts:
 
 **Description**: To Delete the  user in Database which alredy exists, but primarly check if in/not in database.Then it proceeds to Delete the User.Other wise return with Bad request and message.
 
@@ -127,9 +126,58 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 
 
 
- 
- 
+ # Database Setup
 
-      
+ Here we used Sqlite database to  make CRUD operations on the data 
 
-
+ created a table with "Users" name
+         
+         const express = require("express");
+         const sqlite3 = require("sqlite3");
+         const { open } = require("sqlite");
+         const path = require("path");
+         
+         const app = express();
+         app.use(express.json());
+         
+         let db = null;
+         const dbpath = path.join(__dirname, "contacts.db");
+         
+         // Function to create the 'Users' table in the SQLite database
+         const createTable = async () => {
+           try {
+             const createTableQuery = `
+               CREATE TABLE IF NOT EXISTS Users (
+                 ContactID INTEGER PRIMARY KEY AUTOINCREMENT,
+                 Name TEXT NOT NULL,
+                 Email TEXT UNIQUE NOT NULL,
+                 PhoneNumber INTEGER UNIQUE NOT NULL,
+                 Address TEXT,
+                 CreatedAt TEXT DEFAULT CURRENT_TIMESTAMP
+               )
+             `;
+             await db.run(createTableQuery); // Execute the table creation query
+             console.log("Users table created successfully");
+           } catch (error) {
+             console.log(`Error creating table: ${error.message}`);
+           }
+         };
+         
+         // Function to set up the database connection and start the server
+         const UserMangement = async () => {
+           try {
+             db = await open({
+               filename: dbpath,
+               driver: sqlite3.Database,
+             });
+         
+             await createTable(); // Create the Users table
+         
+             app.listen(3000, () => {
+               console.log("Server running at http://localhost:3000");
+             });
+           } catch (error) {
+             console.log("Database Error", error.message);
+           }
+         };
+         UserMangement();
