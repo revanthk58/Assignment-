@@ -185,3 +185,16 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
            }
          };
          UserMangement();
+
+
+
+
+
+
+
+#OUT PUT 
+ ![image alt]( )
+
+
+ I have created A html page to show the users data colourfully
+ 
