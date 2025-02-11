@@ -1,0 +1,45 @@
+
+###this is the requests customised with as Search_q or All data to retrieve
+GET http://localhost:3000/contacts/
+###
+GET http://localhost:3000/contacts/?Name=Rohit
+###
+GET http://localhost:3000/contacts/?Email=shreyas.iyer@example.com&Name=Shreyas
+###
+GET http://localhost:3000/contacts/?Email=mayank.agarwal@example.com
+###
+
+
+//Adding New User to database
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "Name": "Navdeep Saini",
+  "Email": "navdeep.saini@example.com",
+  "PhoneNumber": 9008776677,
+  "Address": "T-Block, Karnal, Haryana, India"
+}
+
+###
+//updating the existing data
+PUT  http://localhost:3000/contacts/4
+Content-Type: application/json
+
+{
+  "Name": "Jasprit Bumrah",
+  "Email": "jasprit.bumrah@example.com",
+  "PhoneNumber": 9988776644,
+  "Address": "L-Block, Ahmedabad, Gujarat, India"
+}
+
+
+###
+//Get data by the Contact Id
+GET http://localhost:3000/contacts/190
+
+###
+//delete the user details by contact Id
+DELETE http://localhost:3000/contacts/50
+
+###
