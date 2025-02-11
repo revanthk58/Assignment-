@@ -120,7 +120,7 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
  
  ** install package.json file  with npm init or npm init -y
  
- ** install dependecies for testing such as "jest,sqlite etc"
+ ** install dependecies for testing such as "jest,sqlite and supertest etc"
 
  After complteing above redirect to  __test__ folder   and  run testCases
 
