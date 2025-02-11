@@ -32,10 +32,10 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 
 | Step | Description |
 |------|-------------|
-| 1.   | Clone the repository: `git clone https://github.com/yourusername/contact-management-api.git` |
-| 2.   | Navigate into the project directory: `cd contact-management-api` |
+| 1.   | Clone the repository: `git clone https://github.com/revanthk58/Assignment-.git` |
+| 2.   | Navigate into the project directory: `cd backend directory` |
 | 3.   | Install the dependencies: `npm install` |
-| 4.   | Ensure **Node.js** and **npm** are installed on your machine. |
+| 4.   | Ensure **Node.js** and **npm** are installed on your Device. |
 | 5.   | Start the server: `npm start` |
 | 6.   | The server will run at `http://localhost:3000`. |
 
@@ -69,6 +69,8 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 ## POST/contacts:
 
 **Description**: To Add new user to Database,but primarly chech if already exists.if not Added to successfully.Other wise return with Bad request and message.
+
+
 
 **Example Request**:
 
@@ -108,6 +110,25 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 **Example Request**:
 
       DELETE http://localhost:3000/contacts/:ContactID
+
+
+
+# Testing
+## test.js
+ create a js file in __test__ folder   with  test.js
+
+ **Write the test cases in javascript 
+ 
+ ** install package.json file  with npm init or npm init -y
+ 
+ ** install dependecies for testing such as "jest,sqlite etc"
+
+ After complteing above redirect to  __test__ folder   and  run testCases
+
+
+
+ 
+ 
 
       
 
