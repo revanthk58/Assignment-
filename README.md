@@ -21,9 +21,9 @@ This is an API built using **Node.js** and **SQLite** to manage user contacts in
 
 - **Node.js**: Server-side JavaScript environment.
 - **Express**: Framework to create the RESTful API.
-- **SQLite**: Lightweight database to store user contact information.
+- **SQLite**: Lightweight database to store user contact information.SQLite wrapper to handle database connections.
 - **SQLite3**: SQLite3 package used to interact with the database.
-- **SQLite**: SQLite wrapper to handle database connections.
+
 
 ---
 
